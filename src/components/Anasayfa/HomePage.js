@@ -6,12 +6,13 @@ import recipeImage1 from '../images/recipe1.png';
 import recipeImage2 from '../images/recipe2.png';
 import categories1 from '../images/categories1.png';
 import categories2 from '../images/categories2.png';
-import bannerImage from '../images/banner-image.jpg';
+import Navbar from '../Navbar/Navbar';
 
 const HomePage = () => {
   return (
     <div className="home-page">
       <header className="header">
+      <Navbar />
         <h1>Welcome to My Recipe App</h1>
         <p>Discover delicious recipes for every occasion</p>
       </header>
@@ -52,3 +53,4 @@ const HomePage = () => {
 };
 
 export default HomePage;
+

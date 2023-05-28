@@ -1,0 +1,98 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid orange; /* Turuncu çizgi */
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-bottom: 0; /* Eklenen çizgiyi düzeltmek için */
+}
+
+.nav-links li {
+  margin-left: 10px;
+}
+
+.nav-links li:first-child {
+  margin-left: 0; /* İlk bağlantıda sol boşluk olmasın */
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 16px;
+  font-weight: bold;
+  border-bottom: 2px solid transparent; /* Başlangıçta görünmez çizgi */
+  transition: border-bottom 0.3s ease-in-out, color 0.3s ease-in-out; /* Geçiş efekti */
+}
+
+.nav-links li a:hover {
+  border-bottom: 2px solid orange; /* Turuncu çizgi efekti */
+  color: orange; /* Turuncu renk */
+}
+
+.sidebar-btn {
+  height: 28px;
+  width: 30px;
+  position: relative;
+}
+
+.sidebar-btn .bar {
+  border-radius: 5px;
+  height: 6px;
+  width: 100%;
+  background-color: black;
+  position: absolute;
+}
+
+.sidebar-btn .bar:nth-child(1) {
+  top: 0;
+}
+
+.sidebar-btn .bar:nth-child(2) {
+  top: 50%;
+  transform-origin: right;
+  transform: scaleX(.8) translateY(-50%);
+}
+
+.sidebar-btn .bar:nth-child(3) {
+  top: 100%;
+  transform-origin: right;
+  transform: scaleX(1.1) translateY(-100%);
+}
+
+.sidebar-btn.active .bar {
+  transform-origin: center;
+  top: 50%;
+}
+
+.sidebar-btn.active .bar:nth-child(1) {
+  transform: translate(0, -50%) scale(1) rotate(45deg);
+}
+
+.sidebar-btn.active .bar:nth-child(2) {
+  transform: scaleX(0) translateY(-50%);
+}
+
+.sidebar-btn.active .bar:nth-child(3) {
+  transform: translate(0, -50%) scale(1) rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .navbar .sidebar-btn {
+    display: block;
+  }
+}

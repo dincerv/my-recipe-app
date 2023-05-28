@@ -3,10 +3,11 @@ import HomePage from '../src/components/Anasayfa/HomePage';
 
 const App = () => {
   return (
-    <div className="app">
+    <div>
       <HomePage />
     </div>
   );
 };
+
 
 export default App;
